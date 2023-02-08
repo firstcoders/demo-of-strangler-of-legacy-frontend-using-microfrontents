@@ -1,0 +1,22 @@
+{
+  "name": "micro-frontends",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<mark@firstcoders.co.uk>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "shell-app",
+      "react-app",
+      "angular1-app"
+    ]
+  },
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
