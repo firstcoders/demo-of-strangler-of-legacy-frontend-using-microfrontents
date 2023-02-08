@@ -30,9 +30,11 @@ module.exports = {
       name: "shellApp",
       remotes: {
         reactApp: "reactApp@[reactAppUrl]/remoteEntry.js",
-        angular1App: "angular1App@[angular1App]/remoteEntry.js",
       },
-      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+      shared: {
+        react: { singleton: true, requiredVersion: "^17.0.2" },
+        "react-dom": { singleton: true, requiredVersion: "^17.0.2" },
+      },
     }),
     new ExternalTemplateRemotesPlugin(),
     new HtmlWebpackPlugin({

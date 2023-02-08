@@ -7,9 +7,8 @@
   "license": "MIT",
   "workspaces": {
     "packages": [
-      "shell-app",
-      "react-app",
-      "angular1-app"
+      "angular1-shell-app",
+      "react-app"
     ]
   },
   "scripts": {
