@@ -2,7 +2,6 @@ export default {
   controller: function () {},
   template: `
         <h2>An angular 1.8 component</h2>
-        <react-component-wrapper></react-component-wrapper>
       `,
 };
 

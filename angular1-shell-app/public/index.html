@@ -6,10 +6,14 @@
   </head>
   <body>
     <div ng-app="app">
+      <nav>
+        <a ui-sref="angular">Angular</a>
+        <a ui-sref="angular.subnav">Angular - subnav</a>
+        <a ui-sref="react">React</a>
+        <a ui-sref="react.subnav">React - subnav</a>
+      </nav>
       <h1>Shell App</h1>
-      <hello-component></hello-component>
+      <div ui-view></div>
     </div>
   </body>
 </html>
-
-<!-- <angularjs-element></angularjs-element> -->
