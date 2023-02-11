@@ -3,6 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <title>Shell App in angular 1.8</title>
+    <style>
+      :root {
+        --component-background-color: rgba(0, 0, 0, 0.2);
+      }
+      body {
+        background-color: var(--component-background-color);
+        padding: 0;
+        margin: 0;
+      }
+      nav {
+        display: block;
+        background-color: grey;
+      }
+      nav a {
+        display: inline-block;
+        padding: 1rem;
+        color: white;
+      }
+      .is-angular {
+        background-color: rgba(255, 0, 0, 0.5);
+        display: block;
+        border: 5px dashed red;
+        padding: 1rem;
+      }
+      .is-react {
+        background-color: rgba(0, 255, 0, 0.5);
+        display: block;
+        border: 5px dashed green;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
     <div ng-app="app">

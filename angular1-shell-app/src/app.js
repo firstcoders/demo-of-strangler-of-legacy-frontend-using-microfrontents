@@ -12,13 +12,18 @@ const registerFederatedComponentRoutes = (
     $stateProvider.state({
       name: `${namespace}.${name}`,
       url: path,
-      template: "<div>Subnav</div>",
     });
   });
 };
 
 angular
   .module("app", ["ui.router"])
+  .config([
+    "$locationProvider",
+    function ($locationProvider) {
+      $locationProvider.hashPrefix("");
+    },
+  ])
   .config(($stateProvider) => {
     $stateProvider
       .state({
@@ -34,6 +39,11 @@ angular
       .state({
         name: "reactApp",
         url: "/react",
+        component: "reactAppWrapperComponent",
+      })
+      .state({
+        name: "reactAppSub",
+        url: "/react/*path",
         component: "reactAppWrapperComponent",
       });
 

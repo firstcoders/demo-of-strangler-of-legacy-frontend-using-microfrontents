@@ -1,5 +1,7 @@
 export default {
-  controller: function () {},
+  controller: function ($element) {
+    $element.addClass("is-angular"); // add class to make clear in DOM what is what
+  },
   template: `
         <h2>An angular 1.8 component</h2>
       `,
