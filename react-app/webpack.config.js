@@ -15,6 +15,26 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: "style-loader",
+            options: {
+              injectType: "lazyStyleTag",
+              // @see https://github.com/webpack-contrib/style-loader#function
+              insert: function insertIntoTarget(element, options) {
+                // Do not forget that this code will be used in the browser and not all browsers support latest ECMA features like let, const, arrow function expression and etc, we recommend use only ECMA 5 features, but it is depends what browsers you want to support
+                var options = options || {};
+                var parent = options.target || document.head;
+                console.debug("Adding styles to target", parent);
+                parent.appendChild(element);
+              },
+            },
+          },
+          "css-loader",
+        ],
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,

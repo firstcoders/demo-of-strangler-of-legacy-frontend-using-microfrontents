@@ -5,36 +5,34 @@
     <title>Shell App in angular 1.8</title>
     <style>
       :root {
-        --component-background-color: rgba(0, 0, 0, 0.2);
+        --angular-component-background-color: rgba(0, 125, 0, 0.5);
+        --angular-component-border-color: green;
+        --angular-component-text-color: black;
+        --reactapp-component-background-color: rgba(0, 0, 255, 0.5);
+        --reactapp-component-border-color: blue;
+        --reactapp-component-text-color: blue;
+        --nav-background-color: rgba(0, 0, 0, 0.5);
+        --nav-link-color: white;
+      }
+      a {
+        color: var(--angular-component-text-color);
       }
       body {
-        background-color: var(--component-background-color);
-        padding: 0;
+        background-color: var(--angular-component-background-color);
+        color: var(--angular-component-text-color);
+        border: 1px solid var(--angular-component-border-color);
+        padding: 1rem;
         margin: 0;
-      }
-      body,
-      a {
-        color: black;
+        font-size: 1.2rem;
       }
       nav {
         display: block;
-        background-color: grey;
+        background-color: var(--nav-background-color);
       }
       nav a {
         display: inline-block;
         padding: 1rem;
-      }
-      .is-angular {
-        background-color: rgba(255, 0, 0, 0.5);
-        display: block;
-        border: 5px dashed red;
-        padding: 1rem;
-      }
-      .is-react {
-        background-color: rgba(0, 255, 0, 0.5);
-        display: block;
-        border: 5px dashed green;
-        padding: 1rem;
+        color: var(--nav-link-color);
       }
     </style>
   </head>
@@ -47,6 +45,20 @@
         <a ui-sref="reactApp.subnav">React - subnav</a>
       </nav>
       <h1>Shell App in angular 1.8</h1>
+      <p class="lead">
+        This is a POC showing several ideas:
+        <ul>
+          <li>It shows how one can start including new REACT/VueJS (or else) components in a shell app built with a legacy front-end framework by using <a href="https://webpack.js.org/concepts/module-federation/" target="blank">Module Federation</a>.</li>
+          <li>It explores a way in which a nested App or component can inform the shell app router about any sub-routing by exporting a routes module.</li>
+          <li>It shows how nested Apps can benefit from style encapsulation by utilising a shadow DOM, thereby ensuring that legacy CSS rules of the shell app do not pollute styling.</li>
+          <li>It explores how the nested App can inject it's styles into it's relevant shadowDOM.</li>
+        </ul>
+        <a
+          href="https://github.com/firstcoders/demo-of-strangler-of-legacy-frontend-using-microfrontents"
+          target="blank"
+          >https://github.com/firstcoders/demo-of-strangler-of-legacy-frontend-using-microfrontents</a
+        >
+      </p>
       <div ui-view></div>
     </div>
   </body>

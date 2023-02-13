@@ -1,0 +1,17 @@
+.container {
+  background-color: var(--reactapp-component-background-color);
+  color: var(--reactapp-component-text-color);
+  border: 5px dashed var(--reactapp-component-border-color);
+  padding: 1em;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  padding: 1rem;
+}
+
+nav a {
+  display: inline-block;
+  color: var(--nav-link-color);
+  padding: 1em;
+}

@@ -32,8 +32,8 @@ module.exports = {
         reactApp: "reactApp@[reactAppUrl]/remoteEntry.js",
       },
       shared: {
-        react: { singleton: true, requiredVersion: "^17.0.2" },
-        "react-dom": { singleton: true, requiredVersion: "^17.0.2" },
+        react: { singleton: true, requiredVersion: "^18.2.0" },
+        "react-dom": { singleton: true, requiredVersion: "^18.2.0" },
       },
     }),
     new ExternalTemplateRemotesPlugin(),

@@ -40,11 +40,6 @@ angular
         name: "reactApp",
         url: "/react",
         component: "reactAppWrapperComponent",
-      })
-      .state({
-        name: "reactAppSub",
-        url: "/react/*path",
-        component: "reactAppWrapperComponent",
       });
 
     // dynamically load routes exposed by the federated component and add to the angular router.
