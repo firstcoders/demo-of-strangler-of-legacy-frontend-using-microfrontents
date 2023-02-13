@@ -26,7 +26,7 @@ export default {
       console.log("rendering react component in shadow dom");
 
       const reactElement = React.createElement(ReactApp.default, {
-        basePath: "react",
+        basePath: "/react",
       });
 
       const container = document.querySelector("[data-react-root]", $element);

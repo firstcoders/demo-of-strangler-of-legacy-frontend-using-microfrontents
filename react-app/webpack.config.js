@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
+const { dependencies } = require("./package.json");
 
 module.exports = {
   entry: "./src/index",
@@ -53,7 +54,13 @@ module.exports = {
         "./App": "./src/App",
         "./routes": "./src/routes",
       },
-      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+      shared: {
+        react: { singleton: true, requiredVersion: dependencies["react-dom"] },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: dependencies["react-dom"],
+        },
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

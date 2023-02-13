@@ -11,24 +11,20 @@ class App extends React.Component {
   }
 
   render() {
+    const basePath = this.props.basePath || "";
+
     return (
       <div ref={this.el} className="container">
         <h2>React App with Subnavigation</h2>
         <Router>
           <nav>
-            <Link to={`/${this.props.basePath}/subnav`}>Subnav</Link>
-            <Link to={`/${this.props.basePath}/subnav2`}>Subnav2</Link>
+            <Link to={`${basePath}/subnav`}>Subnav</Link>
+            <Link to={`${basePath}/subnav2`}>Subnav2</Link>
           </nav>
 
           <Routes>
-            <Route
-              path={`/${this.props.basePath}/subnav`}
-              element={<SubNav />}
-            />
-            <Route
-              path={`/${this.props.basePath}/subnav2`}
-              element={<SubNav2 />}
-            />
+            <Route path={`${basePath}/subnav`} element={<SubNav />} />
+            <Route path={`${basePath}/subnav2`} element={<SubNav2 />} />
           </Routes>
         </Router>
       </div>
