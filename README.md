@@ -1,4 +1,5 @@
 This is a POC showing several ideas:
+
 <ul>
 <li>It shows how one can start including new REACT/VueJS (or else) components in a shell app built with a legacy front-end framework by using <a href="https://webpack.js.org/concepts/module-federation/" target="blank">Module Federation</a>.</li>
 <li>It explores a way in which a nested App or component can inform the shell app router about any sub-routing by exporting a routes module.</li>
@@ -12,6 +13,14 @@ This is a POC showing several ideas:
         >
 
 # Links
+
+## Micro-frontends
+
+- https://servian.dev/how-micro-frontend-frameworks-are-replacing-legacy-monoliths-f66f34d06a2
+
+## Module Federation
+
+- https://github.com/module-federation/module-federation-examples
 
 ## Shadow-DOM
 
