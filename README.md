@@ -6,11 +6,8 @@ This is a POC showing several ideas:
 <li>It shows how nested Apps can benefit from style encapsulation by utilising a shadow DOM, thereby ensuring that legacy CSS rules of the shell app do not pollute styling.</li>
 <li>It explores how the nested App can inject it's styles into it's relevant shadowDOM.</li>
 </ul>
-<a
-          href="https://github.com/firstcoders/demo-of-strangler-of-legacy-frontend-using-microfrontents"
-          target="blank"
-          >https://github.com/firstcoders/demo-of-strangler-of-legacy-frontend-using-microfrontents</a
-        >
+
+Simply run `yarn install && yarn start` and open [http://localhost:3001/](http://localhost:3001/)
 
 # Links
 
