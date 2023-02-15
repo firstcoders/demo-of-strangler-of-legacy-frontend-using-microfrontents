@@ -16,6 +16,10 @@ class App extends React.Component {
     return (
       <div ref={this.el} className="container">
         <h2>React App with Subnavigation</h2>
+        <p>
+          # A prop passed into the component from shell app:
+          {this.props.counter}
+        </p>
         <Router>
           <nav>
             <Link to={`${basePath}/subnav`}>Subnav</Link>
