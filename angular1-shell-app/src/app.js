@@ -1,6 +1,7 @@
 import angular from "angular";
 import helloComponent from "./components/hello";
 import reactComponentWrapper from "./components/react-component-wrapper";
+import authComponent from "./components/auth-component";
 import "@uirouter/angularjs";
 
 const registerFederatedComponentRoutes = (
@@ -37,6 +38,11 @@ angular
         component: "helloComponent",
       })
       .state({
+        name: "auth",
+        url: "/auth",
+        component: "authComponent",
+      })
+      .state({
         name: "reactApp",
         url: "/react",
         component: "reactAppWrapperComponent",
@@ -52,4 +58,5 @@ angular
     );
   })
   .component("helloComponent", helloComponent)
-  .component("reactAppWrapperComponent", reactComponentWrapper);
+  .component("reactAppWrapperComponent", reactComponentWrapper)
+  .component("authComponent", authComponent);

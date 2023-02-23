@@ -23,8 +23,10 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "@aws-amplify/ui-components": "^1.9.40",
     "@uirouter/angularjs": "^1.0.30",
     "angular": "^1.8.2",
-    "angular-route": "^1.8.3"
+    "angular-route": "^1.8.3",
+    "aws-amplify": "^5.0.15"
   }
 }
